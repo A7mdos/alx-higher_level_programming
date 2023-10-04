@@ -2,9 +2,9 @@
 
 def magic_calculation(a, b, c):
     """
-	Does exactly the same as some Python
-	bytecode provided by ALX.
-	"""
+    Does exactly the same as some Python
+    bytecode provided by ALX.
+    """
     if (a < b):
         return (c)
     elif (c > b):
