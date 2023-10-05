@@ -8,7 +8,8 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    ops = {"+": add,
+    ops = {
+           "+": add,
            "-": sub,
            "*": mul,
            "/": div

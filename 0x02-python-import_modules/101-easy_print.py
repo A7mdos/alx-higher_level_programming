@@ -1,6 +1,3 @@
 #!/usr/bin/python3
 
-from os import write
-
-stdout = 1
-write(stdout, "#pythoniscool\n")
+__import__('os').write(1, "#pythoniscool\n".encode())
