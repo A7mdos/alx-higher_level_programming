@@ -31,17 +31,31 @@ class Square:
         self.__position = value
 
     def area(self):
-        return (self.__size ** 2)
+        return (self.__size * self.__size)
 
     def my_print(self):
         if self.__size is not 0:
             for y in range(self.__position[1]):
-                print("")
+                print()
             for i in range(self.__size):
                 for x in range(self.__position[0]):
                     print(" ", end="")
                 for j in range(self.__size):
                     print("#", end="")
-                print("")
+                print()
         else:
-            print("")
+            print()
+
+    def __str__(self):
+        __my_string = ""
+        if self.__size is not 0:
+            for y in range(self.__position[1]):
+                __my_string += '\n'
+            for i in range(self.__size):
+                for x in range(self.__position[0]):
+                    __my_string += ' '
+                for j in range(self.__size):
+                    __my_string += '#'
+                if i is not self.__size - 1:
+                    __my_string += '\n'
+        return __my_string
