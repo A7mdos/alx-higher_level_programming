@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """SUIIIII"""
 
+
 class Node:
     """SUIIIII"""
     def __init__(self, data, next_node=None):
