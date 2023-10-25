@@ -41,14 +41,20 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """SUIIIII"""
-        if self.__head is None or value < self.__head.data:
-            self.__head = Node(value, temp)
+        newNode = Node(value)
+        if self.__head is None:
+            newNode.next_node = None
+            self.__head = newNode
+        elif self.__head.data > value:
+            newNode.next_node = self.__head
+            self.__head = newNode
         else:
-            temp = self.__head
-            while (temp.next_node is not None and
-                    value >= temp.next_node.data):
-                temp = temp.next_node
-            temp.next_node = Node(value, temp.next_node)
+            tempNode = self.__head
+            while (tempNode.next_node is not None and
+                    tempNode.next_node.data < value):
+                tempNode = tempNode.next_node
+            newNode.next_node = tempNode.next_node
+            tempNode.next_node = newNode
 
     def __str__(self):
         """SUIIIII"""
