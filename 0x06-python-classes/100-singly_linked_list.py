@@ -47,7 +47,7 @@ class SinglyLinkedList:
             temp = self.__head
             while (temp.next_node is not None and
                     value >= temp.next_node.data):
-                    temp = temp.next_node
+                temp = temp.next_node
             temp.next_node = Node(value, temp.next_node)
 
     def __str__(self):
